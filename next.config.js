@@ -5,6 +5,8 @@ module.exports = {
       "www.hwcdsb.ca",
       "ychef.files.bbci.co.uk",
       "www.kosherpizzaaventurafl.com",
+      "images.template.net",
+      "fakestoreapi.com",
     ],
   },
 };

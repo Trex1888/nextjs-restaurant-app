@@ -4,32 +4,36 @@ import {
   SearchIcon,
   ShoppingCartIcon,
 } from "@heroicons/react/outline";
+import { useRouter } from "next/router";
 
 function Header() {
+  const router = useRouter();
+
   return (
     <header>
       <div className="flex items-center bg-amazon_blue p-1 flex-grow py-1">
         <div className="flex items-center mt-1 flex-grow sm:flex-grow-0">
           <Image
             onClick={() => router.push("/")}
-            src="https://www.hwcdsb.ca/418772.jpg"
-            width={75}
-            height={80}
+            // src="https://www.hwcdsb.ca/418772.jpg"
+            src="https://images.template.net/wp-content/uploads/2017/02/22202033/Chef-Pizza-Vector.jpg"
+            width={90}
+            height={60}
             objectFit="contain"
             className="cursor-pointer"
           />
         </div>
 
-        <div className="flex text-white items-center text-xs space-x-6 mx-6 whitespace-nowrap">
-          {/* <div className="link">
+        {/* <div className="flex text-white items-center text-xs space-x-6 mx-6 whitespace-nowrap flex-grow">
+          <div className="link">
             <p>HELLO WELCOME TO</p>
             <p className="font-extrabold md:text-sm">Pete's Pizzeria</p>
-          </div> */}
-        </div>
+          </div>
+        </div> */}
 
         <div
           className="items-center hidden sm:flex h-10 rounded-md flex-grow 
-             bg-yellow-400 hover:bg-yellow-500 cursor-pointer"
+             bg-gray-100 hover:bg-gray-200 cursor-pointer"
         >
           <input
             type="text"
@@ -40,7 +44,6 @@ function Header() {
         </div>
 
         <div className="flex text-white items-center text-xs space-x-6 mx-6 whitespace-nowrap">
-          {" "}
           <div className="link ">
             <p>"Sign In"</p>
             <p className="font-extrabold md:text-sm">Account & Orders</p>
@@ -54,7 +57,7 @@ function Header() {
             className="relative link flex items-center"
           >
             <span
-              className="absolute top-0 right-0 md:right-10 h-4 w-4 bg-yellow-400
+              className="absolute top-0 right-0 md:right-10 h-4 w-4 bg-red-100
                  text-center rounded-full text-black font-bold"
             >
               {/* {items.length} */}
@@ -73,15 +76,17 @@ function Header() {
           <MenuIcon className="h-6 mr-1.5" />
           All
         </p>
-        <p className="link">Appetizers</p>
+        <p className="link" onClick={() => router.push("/appetizers")}>
+          Appetizers
+        </p>
         <p className="link">Pizza</p>
         <p className="link">Pasta</p>
-        <p className="link ">Appetizers</p>
+        <p className="link ">Salads</p>
         <p className="link hidden lg:inline-flex">Sandwiches</p>
         <p className="link hidden lg:inline-flex">Steaks</p>
         <p className="link hidden lg:inline-flex">Seafood</p>
-        <p className="link hidden lg:inline-flex">Salads</p>
         <p className="link hidden lg:inline-flex">Chicken</p>
+        <p className="link hidden lg:inline-flex">Vegetarian</p>
         <p className="link hidden lg:inline-flex">Beverages</p>
         <p className="link hidden lg:inline-flex">Deserts</p>
         <p className="link hidden lg:inline-flex">Kids Menu</p>
